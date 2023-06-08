@@ -1,38 +1,346 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.space {
+  padding: 2rem 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.banner {
+  font-family: "Paytone One", sans-serif;
+  letter-spacing: 1px;
+}
+.logo {
+  width: 80px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.banner {
+  padding: 40px 0 50px 0;
+  background-color: #eef0ff;
+  border-radius: 10px 10px 300px 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.header {
+  background-color: #eef0ff;
+}
+:root {
+  --primary-color: #92c93a;
+  --secondary-color: #0e6caa;
 }
 
-@keyframes App-logo-spin {
+.bannerimg {
+  border-radius: 1000px;
+}
+
+.subheading {
+  font-size: 35px;
+  font-family: "Paytone One", sans-serif;
+  letter-spacing: 1px;
+}
+.banner .subheading {
+  font-size: 50px;
+}
+
+.banner h3 {
+  font-size: 50px !important;
+  font-weight: 700;
+}
+
+.heading {
+  color: var(--primary-color);
+
+  font-weight: 600;
+}
+.subheading {
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+.btn1 {
+  background-color: var(--secondary-color) !important;
+  color: white !important;
+  padding: 10px;
+  box-shadow: none !important;
+}
+
+/* animation banner */
+
+.carousel-item.active h6 {
+  width: 100%;
+  animation: 1s slide-right;
+}
+
+.carousel-item.active h3 {
+  width: 100%;
+  animation: 2s slide-right;
+}
+.carousel-item.active p {
+  width: 100%;
+  animation: 3s slide-right;
+}
+.carousel-item.active button {
+  animation: 3s slide-right;
+}
+
+.carousel-item.active img {
+  animation: 2s slide-left;
+}
+
+@keyframes slide-right {
   from {
-    transform: rotate(0deg);
+    margin-left: -100%;
   }
   to {
-    transform: rotate(360deg);
+    margin-left: 0%;
+  }
+}
+
+@keyframes slide-left {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+.carousel-control-prev-icon {
+  background-image: url(./images/up-arrow.png) !important;
+
+  position: absolute !important;
+}
+.carousel-control-prev {
+  left: -62px !important;
+  bottom: 100px !important;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  width: max-content !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url(./images/down-arrow.png) !important;
+  position: absolute !important;
+}
+.carousel-control-next {
+  position: absolute !important;
+  left: -62px !important;
+  top: 20px !important;
+}
+
+.boxes1 {
+  background-color: #ffa2bc9e;
+}
+.boxes2 {
+  background-color: #b996fe94;
+}
+.boxes3 {
+  background-color: #6dc1a0a8;
+}
+.boxes4 {
+  background-color: #ffc14799;
+}
+
+.box {
+  padding: 30px 24px;
+  border-radius: 20px;
+}
+
+.offer .box .title {
+  font-weight: 400;
+  margin-top: 10px;
+  font-size: 20px;
+  font-family: "Paytone One", sans-serif;
+}
+p {
+  color: #54595f;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.offer .btn {
+  color: white !important;
+  background-color: #0e6caa !important;
+}
+
+.childCare {
+  height: 500px;
+}
+.childCare img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+@media (max-width: 768px) {
+  .col-md-3 {
+    margin-bottom: 20px;
+  }
+}
+
+.whitebox {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 100%;
+  margin-right: 15px;
+  color: var(--secondary-color);
+  background-color: white;
+  line-height: 45px;
+  box-shadow: 0px 6px 14px 0px rgb(0 0 0 / 10%);
+  font-size: 14px;
+}
+
+.aboutList li {
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.aboutList li:hover {
+  color: var(--secondary-color);
+
+  transition: all ease-in 0.1s;
+}
+
+.callingbtn {
+  font-size: 24px;
+  background-color: var(--secondary-color);
+  color: white;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 100%;
+  margin-right: 20px;
+}
+
+.review {
+  background-image: url("./images/background.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1;
+  padding: 100px;
+  border-radius: 30px;
+}
+
+.counterbg {
+  background-color: var(--secondary-color);
+  padding: 30px;
+  border-radius: 30px;
+}
+
+.footer {
+  background-color: #1d2150;
+  padding: 100px;
+}
+
+.topHeader {
+  background-color: #1d2150;
+  padding: 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+.footer-spacing li {
+  line-height: 50px;
+}
+
+.Terms h3 {
+  font-size: 22px;
+  font-weight: 600;
+  border-left: 3px solid #143556;
+  padding: 10px;
+}
+
+.bg-grey {
+  background-color: rgb(237, 237, 237);
+}
+
+.social_icons {
+  display: flex;
+  gap: 30px;
+}
+
+.social_icons li i {
+  font-size: 20px;
+}
+.social_icons li a:hover i {
+  color: var(--primary-color) !important;
+  transition: all ease-in 0.1s;
+  transform: scale(1.3);
+}
+
+.mail {
+  height: 30px;
+  width: 30px;
+  background: var(--secondary-color);
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+}
+
+.Terms li {
+  margin-bottom: 22px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .Terms h3 {
+    font-size: 14px;
+  }
+  .mail_list {
+    display: none;
+  }
+  .Terms li {
+    font-size: 12px;
+  }
+  .Terms h5 {
+    font-size: 14px;
+  }
+  .footer {
+    padding: 20px;
+  }
+  .bannerimg1 {
+    display: none;
+  }
+  .banner h3 {
+    font-size: 20px !important;
+  }
+  .banner .subheading {
+    font-size: 20px;
+  }
+  .banner {
+    padding: 16px 0 50px 0;
+  }
+  .subheading {
+    font-size: 20px;
+  }
+  #counter h3 {
+    font-size: 16px;
+  }
+  .callingbtn {
+    font-size: 16px;
+    width: 40px;
+    line-height: 38px;
+    height: 40px;
+  }
+  .childCare {
+    height: 350px;
+    margin-bottom: 20px;
   }
 }
